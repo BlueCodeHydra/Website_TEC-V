@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEC-V Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="logo-img">
+                <h1 class="logo">TEC-V Project</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="title">
+        <div class="container">
+            <img src="images/TecV1.png" alt="TEC-V Image" class="tecv-img">
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="section-content">
+            <h2>Mission Statement</h2>
+            <h2-2>Topographic</h2-2>
+            <h2-2>Exploration</h2-2>
+            <h2-2>Cave</h2-2>
+            <h2-2>Vehicle</h2-2>
+            <h3>Develop an optimized scanning and mapping system designed 
+                for enclosed underwater environments, utilizing integrated 
+                instrumentation on the TEC-V platform. This system aims to 
+                enhance enclosed environmental mapping, cave exploration, 
+                port and harbor monitoring, and under-ice surveying, while 
+                providing an entry-level ROV platform</h3>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="section-content">
+            <h2>About Us</h2>
+            <p>Our team consists of:</p>
+            <ul>
+                <li>Stephen Coster (OE) - Project Lead</li>
+                <li>Henry Hill (OE) - Vechicle Dynamics </li>
+                <li>Mike Dowling (CSE) - Software Integration Technician</li>
+                <li>Gabor Papp (ME) - Mechanical Design Engineer</li>
+            </ul>
+            <h3>We are a group of dedicated engineers and technicians 
+                focused on developing innovative solutions for underwater 
+                exploration.</h3>
+        </div>
+    </section>
+
+    <section class="design">
+        <div class="design-section">
+            <h2-2>Design Elements</h2-2>
+            <div class="design-grid">
+                <div class="design-item">
+                    <h3>Mechanical Design</h3>
+                    <p>Detailed mechanical design to ensure durability and efficiency using modular components for easy maintenance and upgrades.</p>
+                    <div class="grid">
+                        <div class="rectangle tooltip" 
+                            data-name="Mechanical Design 1" 
+                            data-job="Detailed mechanical design" 
+                            data-summary="Ensuring durability and efficiency using modular components for easy maintenance and upgrades." 
+                            style="background-image: url('images/MechanicalDesign1.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mechanical Design 2" 
+                            data-job="Detailed mechanical design" 
+                            data-summary="Ensuring durability and efficiency using modular components for easy maintenance and upgrades." 
+                            style="background-image: url('images/MechanicalDesign2.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mechanical Design 3" 
+                            data-job="Detailed mechanical design" 
+                            data-summary="Ensuring durability and efficiency using modular components for easy maintenance and upgrades." 
+                            style="background-image: url('images/MechanicalDesign3.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mechanical Design 4" 
+                            data-job="Detailed mechanical design" 
+                            data-summary="Ensuring durability and efficiency using modular components for easy maintenance and upgrades." 
+                            style="background-image: url('images/MechanicalDesign4.png');">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <h3>Sonar</h3>
+                    <p>Integration of advanced sonar systems: "Cerulean FS" for precise mapping and detailed underwater imaging.</p>
+                    <div class="grid">
+                        <div class="rectangle tooltip" 
+                            data-name="Sonar 1" 
+                            data-job="Advanced sonar systems" 
+                            data-summary="Precise mapping and detailed underwater imaging with 'Cerulean FS'." 
+                            style="background-image: url('images/Sonar1.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Sonar 2" 
+                            data-job="Advanced sonar systems" 
+                            data-summary="Precise mapping and detailed underwater imaging with 'Cerulean FS'." 
+                            style="background-image: url('images/Sonar2.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Sonar 3" 
+                            data-job="Advanced sonar systems" 
+                            data-summary="Precise mapping and detailed underwater imaging with 'Cerulean FS'." 
+                            style="background-image: url('images/Sonar3.jpg');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Sonar 4" 
+                            data-job="Advanced sonar systems" 
+                            data-summary="Precise mapping and detailed underwater imaging with 'Cerulean FS'." 
+                            style="background-image: url('images/Sonar4.jpg');">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <h3>Mapping</h3>
+                    <p>Comprehensive mapping capabilities using SLAM techniques to create accurate 3D models of underwater environments.</p>
+                    <div class="grid">
+                        <div class="rectangle tooltip" 
+                            data-name="Mapping 1" 
+                            data-job="Comprehensive mapping" 
+                            data-summary="Using SLAM techniques to create accurate 3D models of underwater environments." 
+                            style="background-image: url('images/Mapping1.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mapping 2" 
+                            data-job="Comprehensive mapping" 
+                            data-summary="Using SLAM techniques to create accurate 3D models of underwater environments." 
+                            style="background-image: url('images/Mapping2.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mapping 3" 
+                            data-job="Comprehensive mapping" 
+                            data-summary="Using SLAM techniques to create accurate 3D models of underwater environments." 
+                            style="background-image: url('images/Mapping3.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mapping 4" 
+                            data-job="Comprehensive mapping" 
+                            data-summary="Using SLAM techniques to create accurate 3D models of underwater environments." 
+                            style="background-image: url('images/Mapping4.PNG');">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="design-item">
+                    <h3>Composites</h3>
+                    <p>Use of advanced composites such as carbon fiber for lightweight and robust construction, ensuring neutral buoyancy and hydrodynamic efficiency.</p>
+                    <div class="grid">
+                        <div class="rectangle tooltip" 
+                            data-name="Composites 1" 
+                            data-job="Advanced composites" 
+                            data-summary="Lightweight and robust construction with carbon fiber, ensuring neutral buoyancy and hydrodynamic efficiency." 
+                            style="background-image: url('images/Composites1.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Composites 2" 
+                            data-job="Advanced composites" 
+                            data-summary="Lightweight and robust construction with carbon fiber, ensuring neutral buoyancy and hydrodynamic efficiency." 
+                            style="background-image: url('images/Composites2.png');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Composites 3" 
+                            data-job="Advanced composites" 
+                            data-summary="Lightweight and robust construction with carbon fiber, ensuring neutral buoyancy and hydrodynamic efficiency." 
+                            style="background-image: url('images/Composites6.jpg');">
+                            <p></p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Composites 4" 
+                            data-job="Advanced composites" 
+                            data-summary="Lightweight and robust construction with carbon fiber, ensuring neutral buoyancy and hydrodynamic efficiency." 
+                            style="background-image: url('images/Composites4.png');">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+                <h3></h3>
+                <h3></h3>
+                <h3>---</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="design">
+        <div class="design-section">
+            <h2-2>Meet the Team</h2-2>
+                <div class="design-item">
+                    <div class="grid">
+                        <h3>Dr. Stephen Wood</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Dr. Stephen Wood" 
+                            data-job="Program Chair for Ocean Engineering" 
+                            data-summary="Professor | College of Engineering and Science - Ocean Engineering and Marine Sciences" 
+                            style="background-image: url('images/Wood.jpg');">
+                            <p></p>
+                        </div>
+                        <h3>Dr. Marius Silaghi</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Dr. Marius Silaghi" 
+                            data-job="Professor | College of Engineering and Science - Electrical Engineering and Computer Science" 
+                            data-summary="" 
+                            style="background-image: url('images/Silaghi.jpg');">
+                            <p></p>
+                        </div>
+                        <h3>Stephen Coster</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Project Lead" 
+                            data-job="Major: Ocean Engineer" 
+                            data-summary="" 
+                            style="background-image: url('images/Stephen.PNG');">
+                            <p></p>
+                        </div>
+                        <h3>Henry Hill</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Design" 
+                            data-job="Major: Ocean Engineer" 
+                            data-summary="" 
+                            style="background-image: url('images/Henry.PNG');">
+                            <p></p>
+                        </div>
+                        <h3>Gabor</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Project Lead" 
+                            data-job="Major: Mechanical Engineering" 
+                            data-summary="" 
+                            style="background-image: url('images/Gabor.PNG');">
+                            <p></p>
+                        </div>
+                        <h3>Michael Dowling</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Software Lead" 
+                            data-job="Major: Computer Science" 
+                            data-summary="Designed TEC-V information wepage and was in charge of sonar data aquasition and translation to a 3-Dimentioal interface."
+                            style="background-image: url('images/Mike.png');">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="design">
+        <div class="design-section">
+            <h2-2>Deployment Media</h2-2>
+                <div class="design-item">
+                    <div class="grid">
+                        <h3>Test Image 1</h3>
+                        <div class="rectangle tooltip" 
+                            data-name="Shark1 " 
+                            data-job=" " 
+                            data-summary=" " 
+                            style="background-image: url('images/TecVShark.jpg');">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="section-content">
+            <h2>Links</h2>
+            <p>Ocean Engineering pdf's</p>
+            <ul>
+                <li><a href="pdfs/PDR.pdf" target="_blank">Preliminary Design Review (PDF)</a></li>
+                <li><a href="pdfs/CDR.pdf" target="_blank">Critical Design Review (PDF)</a></li>
+                <li><a href="pdfs/Week1.pdf" target="_blank">Senior Design Week 1</a></li>
+                <li><a href="pdfs/Week2.pdf" target="_blank">Senior Design Week 2</a></li>
+                <li><a href="pdfs/Week3.pdf" target="_blank">Senior Design Week 3</a></li>
+                <li><a href="https://bluecodehydra.github.io/3DCloudPlot_Webpage/" target="_blank">Mapping Website</a></li>
+                <li><a href="https://bluecodehydra.github.io/FIT_Project-TEC_V/team.html" target="_blank">Team Website</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TEC-V Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        }
+        
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                var rect = section.getBoundingClientRect();
+                var distanceFromTop = rect.top - window.innerHeight;
+                var distanceFromBottom = rect.bottom;
+        
+                if (distanceFromTop < 0 && distanceFromBottom > 0) {
+                    section.style.opacity = 1;
+                    section.style.transform = `translateY(0px)`;
+                } else {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+        
+        // Modal functionality
+        var modal = document.getElementById("teamModal");
+        var modalImage = document.getElementById("modalImage");
+        var modalName = document.getElementById("modalName");
+        var modalJob = document.getElementById("modalJob");
+        var modalSummary = document.getElementById("modalSummary");
+        
+        document.querySelectorAll('.hex, .rectangle').forEach(function(item) {
+            item.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImage.style.backgroundImage = item.style.backgroundImage;
+                modalName.textContent = item.dataset.name;
+                modalJob.textContent = item.dataset.job || item.dataset.name; // Use the name as job if not provided
+                modalSummary.textContent = item.dataset.summary;
+            });
+        });
+        
+        document.querySelector('.modal .close').addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+        
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });        
+        
+    </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 /*===============================================================================*/
 /*                                  GLOBAL STYLES                                */
 /*===============================================================================*/
@@ -18,7 +20,6 @@ body {
 
 .container {
     width: 80%;
-    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: .5%;
 }
@@ -134,9 +135,8 @@ section.title {
     background: rgba(255, 255, 255, 0.85); /* Slightly transparent background to blend with hex background */
     color: #0a1a2a;
     padding: 12% 2% 5%; /* Add padding to ensure text is not touching the edges */
-    margin: 4% auto; /* Center horizontally */
-    width: 80%; /* Change width to fit-content to allow expansion */
-    max-width: 1200px;
+    margin: 4%;
+    width: fit-content; /* Change width to fit-content to allow expansion */
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     box-sizing: border-box; /* Include padding in the element's total width and height */
     overflow: hidden; /* Prevent text overflow */
@@ -244,16 +244,6 @@ section.title {
     padding-top: 2px;
 }
 
-.about h4 {
-    font-size: 20px;
-    text-align: center;
-    margin-left: 2%;
-    margin-right: 5%;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    padding-top: 2px;
-}
-
 section.about {
     display: flex;
     justify-content: center;
@@ -271,94 +261,10 @@ section.about {
     margin: 0 auto; /* Center the image */
 }
 
-.video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0; /* Adjust as needed for spacing */
-    max-width: 1200px;
-}
-
-.centered-video {
-    width: 90%; /* Adjust width as needed */
-    border: 2px solid #ffffff; /* White border */
-    border-radius: 5%; /* Rounded edges */
-    height: auto; /* Maintain aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-}
-
-
-/*===============================================================================*/
-/*                                 IMAGE SECTION                                 */
-/*===============================================================================*/
-
-.image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0; /* Adjust as needed for spacing */
-    width: 100%;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Set a max width to control image size */
-}
-
-.centered-image {
-    width: 90%; /* Adjust width as needed */
-    border: 2px solid #ffffff; /* White border */
-    border-radius: 5%; /* Rounded edges */
-    height: auto; /* Maintain aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-}
-
-
 
 /*===============================================================================*/
 /*                               LINKS STYLES                                    */
 /*===============================================================================*/
-.links-section .section-content.square {
-    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background to blend with hex background */
-    color: #0a1a2a;
-    padding: 12% 2% 5%; /* Add padding to ensure text is not touching the edges */
-    margin: 4%;
-    width: fit-content; /* Change width to fit-content to allow expansion */
-    border-radius: 15px; /* Rounded corners */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    overflow: hidden; /* Prevent text overflow */
-    text-align: center; /* Center align text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.links-section .section-content.square ul {
-    list-style: none;
-    padding: 5% 1%;
-}
-
-.links-section .section-content.square ul li {
-    margin: 5% 0;
-    list-style-type: square;
-}
-
-.links-section .section-content.square ul li a {
-    text-decoration: none;
-    color: #007bfe;
-    transition: color 0.3s ease;
-}
-
-.links-section .section-content.square ul li a:hover {
-    color: #0056b3;
-}
-
 
 .links ul {
     list-style: none;
@@ -379,7 +285,6 @@ section.about {
 .links ul li a:hover {
     color: #0056b3;
 }
-
 
 /*===============================================================================*/
 /*                               FOOTER STYLES                                   */
@@ -536,7 +441,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 90%;
     padding: 2rem;
     margin: 0 auto;
     border-radius: 10px;
@@ -544,12 +449,13 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box; /* Ensure padding is included in the width */
     overflow: hidden; /* Prevent overflow */
-    margin-top: 5%;
 }
 
 .design h2-2 {
     font-size: 50px;
     text-align: center;
+    margin-left: 2%;
+    margin-right: 5%;
     margin-bottom: 0;
 }
 
@@ -606,113 +512,14 @@ footer p {
     align-items: center;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer; /* Add pointer cursor */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.rectangle:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 .rectangle p {
     position: absolute;
     bottom: 10px;
     text-align: center;
-    color: #06f4ec;
+    color: #fff;
     font-weight: bold;
-    border-radius: 2px;
-    border-color:#000000;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 100px) {
-    .rectangle {
-        width: 100%; /* Single column on small screens */
-    }
-}
-
-/*===============================================================================*/
-/*                              PHOTO SECTIONS                                   */
-/*===============================================================================*/
-
-.photo-sections {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    width: 100%;
-}
-
-.photo-sections .section-content {
-    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
-    color: #0a1a2a;
-    padding: 12% 2% 5%; /* Add padding to ensure text is not touching the edges */
-    margin: 4%;
-    width: fit-content; /* Change width to fit-content to allow expansion */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    overflow: hidden; /* Prevent text overflow */
-    text-align: center; /* Center align text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Rounded corners */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.photo-sections .section-content:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.photo-sections h2 {
-    font-size: 40px;
-    text-align: center;
-    margin: 0 0 20px 0;
-}
-
-.photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-}
-
-.rectangle {
-    width: calc(50% - 1rem); /* Two images per row with some spacing */
-    height: 150px; /* Adjust the height as needed */
-    margin: 0;
-    background-size: contain; /* Ensure the entire image is visible */
-    background-position: center;
-    background-repeat: no-repeat; /* Prevent tiling */
-    border-radius: 15px; /* Rounded edges */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer; /* Add pointer cursor */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.rectangle:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
-
-.rectangle p {
-    position: absolute;
-    bottom: 1px;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.7); /* Black background with some transparency */
-    padding: 2px 5px; /* Add some padding around the text */
-    border-radius: 2px; /* Rounded corners */
 }
 
 /* Responsive design for smaller screens */
@@ -721,6 +528,9 @@ footer p {
         width: 100%; /* Single column on small screens */
     }
 }
+
+
+
 
 /*===============================================================================*/
 /*                              MODAL STYLES                                     */
@@ -752,18 +562,6 @@ footer p {
     text-align: center;
 }
 
-#modalImage {
-    width: 80%;
-    height: 400px; /* Adjust the height as needed */
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-size: cover; /* Ensure the image covers the entire div */
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
 .modal .close {
     color: #aaa;
     float: right;
@@ -779,15 +577,13 @@ footer p {
     cursor: pointer;
 }
 
-.modal .rectangle {
-    width: 80%;
-    height: auto;
+.modal .hex {
+    width: 200px;
+    height: 230.94px;
     margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.modal .rectangle p {
+.modal .hex p {
     bottom: -40px;
 }
 
@@ -882,12 +678,12 @@ footer p {
         width: 90%;
     }
 
-    .modal .rectangle {
-        width: 100%;
-        height: auto;
+    .modal .hex {
+        width: 150px;
+        height: 173.2px;
     }
 
-    .modal .rectangle p {
+    .modal .hex p {
         bottom: -30px;
     }
 
