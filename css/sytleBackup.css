@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/*===============================================================================*/
+/*                                  GLOBAL STYLES                                */
+/*===============================================================================*/
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(10deg, #070707, #123450, #0a1a2a, #0a3558);
+    color: #fff;
+    background-color: #0a1a2a;
+    background-image: url('../images/hexagonal_background_generated.webp'); /* Update with your image path */
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    max-height: 50px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: .5%;
+}
+
+/*===============================================================================*/
+/*                                 HEADER STYLES                                 */
+/*===============================================================================*/
+
+header {
+    background: #092230;
+    color: #fff;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 2.5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    margin-right: 20px;
+    filter: invert(1);
+}
+
+.tecv-img {
+    margin-top: 40px;
+    margin-left: 10%;
+    max-width: 80%;
+    height: auto;
+}
+
+header .logo {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #000000;
+}
+
+/*===============================================================================*/
+/*                               TITLE SECTION                                   */
+/*===============================================================================*/
+
+section.title {
+    background: url('../images/Underwater_Cave_HighRes.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 10% ;
+    clip-path: none;
+    position: relative;
+    border: 2px solid #fff; /* White line below title container */
+    border-radius: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Flex 80% of the screen width */
+    max-height: 700px; /* Set maximum height */
+    margin: 0 auto; /* Center the section */
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/*===============================================================================*/
+/*                               SECTION CONTENT                                 */
+/*===============================================================================*/
+
+.section-content {
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background to blend with hex background */
+    color: #0a1a2a;
+    padding: 12% 2% 5%; /* Add padding to ensure text is not touching the edges */
+    margin: 4%;
+    width: fit-content; /* Change width to fit-content to allow expansion */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Prevent text overflow */
+    text-align: center; /* Center align text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-content h2, .section-content p {
+    margin: 0; /* Remove default margins */
+}
+
+.section-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section-content p,
+.section-content ul li {
+    padding-bottom: 2%; /* Add padding to extend the bottom part of the polygon */
+}
+
+
+/*===============================================================================*/
+/*                              MISSION STYLES                                   */
+/*===============================================================================*/
+
+.mission p {
+    margin: 5%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.mission h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 9%;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+.mission h2-2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 2px 0;
+    display: inline-block;
+}
+
+.mission h2-2::first-letter {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+
+.mission h3 {
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 20%;
+    color: rgba(2, 38, 46, 0.938);
+}
+
+/*===============================================================================*/
+/*                              ABOUT STYLES                                     */
+/*===============================================================================*/
+
+.about h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: .5%;
+}
+
+.about p {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 5%;
+    padding-bottom: 1px;
+}
+
+.about ul {
+    padding-top: 5px;
+    list-style: none;
+    padding: .5% 5%;
+}
+
+.about ul li {
+    margin: 1% 0;
+    list-style-type: square;
+    color: #0a1a2a;
+}
+
+.about h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 5%;
+    padding-bottom: 13%;
+    padding-top: 2px;
+}
+
+section.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+    width: 100%;
+}
+
+.tecv-img2 {
+    width: 90%;
+    height: auto;
+    border: 2px solid #fff; /* White border around the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    margin: 0 auto; /* Center the image */
+}
+
+
+/*===============================================================================*/
+/*                               LINKS STYLES                                    */
+/*===============================================================================*/
+
+.links ul {
+    list-style: none;
+    padding: 5% 1%;
+}
+
+.links ul li {
+    margin: 5% 0;
+    list-style-type: square;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #007bfe;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: #0056b3;
+}
+
+/*===============================================================================*/
+/*                               FOOTER STYLES                                   */
+/*===============================================================================*/
+
+footer {
+    background: #071218;
+    color: #fff;
+    text-align: center;
+    padding: 2% 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/*===============================================================================*/
+/*                              HEXAGON GRID                                     */
+/*===============================================================================*/
+
+.hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hex {
+    position: relative;
+    width: 120px;
+    height: 138.56px;
+    background-color: #0a1a2a;
+    margin: 69.28px 0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer; /* Add pointer cursor */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease, transform 1s ease, border 1s ease; /* Add transition for border */
+    opacity: 1;
+    border: 5px solid transparent; /* Initially set border to transparent */
+}
+    
+.hex:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white background on hover */
+    transform: scale(1.5); /* Slightly increase size on hover */
+    border-radius: 5px; /* Ensure border-radius transition if needed */
+}
+
+.hex-in {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hex-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+.hex:hover .hex-img {
+    transform: scale(1.1); /* Scale the image on hover */
+}
+
+.hex p {
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+/*===============================================================================*/
+/*                              TOOLTIP STYLES                                   */
+/*===============================================================================*/
+
+/* Popup cue styles */
+.popup-cue {
+    display: none; /* Initially hidden */
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+/* Add class to show popup cue */
+.show-popup {
+    display: block;
+    opacity: 1;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the hexagon */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*===============================================================================*/
+/*                              DESIGN SECTION                                   */
+/*===============================================================================*/
+
+.design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: rgba(18, 91, 108, 0.5); /* Slightly transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.design h2-2 {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 0;
+}
+
+/* Center the grid within the design-section */
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always two columns */
+    gap: 7%;
+    margin-top: 2rem;
+    width: 100%; /* Ensure the grid takes up full width */
+    padding: 4% 4%; /* Add padding to prevent overflow */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.design-item {
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    color: #0a1a2a;
+    padding: .5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: center;
+    width: 100%; /* Ensure the items take up full width */
+    max-width: 600px; /* Set a max-width to prevent excessive stretching */
+    margin: 0 auto; /* Center the items */
+    margin-bottom: 5%;
+}
+
+.design-item h3 {
+    margin-bottom: 1rem;
+}
+
+.design-item p {
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.rectangle {
+    width: calc(50% - 1rem); /* Two images per row with some spacing */
+    height: 150px; /* Adjust the height as needed */
+    margin: 0;
+    background-size: contain; /* Ensure the entire image is visible */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent tiling */
+    border-radius: 15px; /* Rounded edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rectangle p {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .rectangle {
+        width: 100%; /* Single column on small screens */
+    }
+}
+
+
+
+
+/*===============================================================================*/
+/*                              MODAL STYLES                                     */
+/*===============================================================================*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    animation: fadeIn 0.5s; /* Fade in the modal */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation: slideIn 0.5s; /* Slide in the modal content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal .hex {
+    width: 200px;
+    height: 230.94px;
+    margin: 20px auto;
+}
+
+.modal .hex p {
+    bottom: -40px;
+}
+
+.modal-text {
+    margin-top: 20px;
+}
+
+.modal-text h2 {
+    color: #0a1a2a;
+    font-size: 50px;
+}
+
+.modal-text h3 {
+    color: #0a3558;
+    font-size: 20px;
+}
+
+.modal-text p {
+    color: #0a1a2a;
+    font-size: 16px;
+}
+
+/*===============================================================================*/
+/*                              KEYFRAMES FOR ANIMATIONS                         */
+/*===============================================================================*/
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-60px); }
+    to { transform: translateY(0); }
+}
+
+/*===============================================================================*/
+/*                              RESPONSIVE STYLES                                */
+/*===============================================================================*/
+
+@media (max-width: 679px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0b3d59;
+        position: absolute;
+        top: 70px;
+        right: 0; /* Position the menu from the right */
+        width: 50%; /* Menu spans half the screen */
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav .menu-icon {
+        display: block;
+    }
+
+    header nav ul li {
+        margin: 5% 0;
+        font-size: 40px;
+    }
+
+    .section-content {
+        clip-path: none;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        text-align: left;
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .hex-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hex {
+        width: 80px;
+        height: 92.14px;
+        margin: 46.07px 0;
+    }
+
+    .hex p {
+        bottom: -20px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal .hex {
+        width: 150px;
+        height: 173.2px;
+    }
+
+    .modal .hex p {
+        bottom: -30px;
+    }
+
+    .modal-text h2 {
+        font-size: 50px;
+    }
+
+    .modal-text h3 {
+        font-size: 18px;
+    }
+
+    .modal-text p {
+        font-size: 14px;
+    }
+
+    .design-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 10%;
+    }
+
+    .design-item {
+        margin-bottom: 2rem;
+        padding-bottom: 10%;
+    }
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(10deg, #070707, #123450, #0a1a2a, #0a3558);
+    color: #fff;
+    background-color: #0a1a2a;
+    background-image: url('../images/hexagonal_background_generated.webp'); /* Update with your image path */
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: .5%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+

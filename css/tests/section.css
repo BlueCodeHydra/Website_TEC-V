@@ -1,0 +1,102 @@
+section {
+    padding: 5% 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Initial position for fade-in effect */
+}
+
+section.title {
+    background: url('../images/Underwater_Cave_HighRes.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 10% 0;
+    clip-path: none;
+    position: relative;
+    border-bottom: 2px solid #fff; /* White line below title container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 5%;
+}
+
+.title img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+.section-content {
+    background: rgba(255, 255, 255, 1); /* Solid white background */
+    color: #0a1a2a;
+    padding: 5%; /* Ensure there is padding on all sides */
+    margin: 0 auto;
+    width: 80%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Prevent text overflow */
+    text-align: justify; /* Ensure text is justified within the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease; /* Add transition for opacity */
+}
+
+.section-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section-content p,
+.section-content ul li {
+    padding-bottom: 2%; /* Add padding to extend the bottom part of the polygon */
+}
+
+.mission p,
+.design p {
+    margin: 5% 5%;
+}
+
+.about ul {
+    list-style: none;
+    padding: 1% 5%;
+}
+
+.about ul li {
+    margin: 2% 0;
+    list-style-type: square;
+    color: #0a1a2a;
+}
+
+.links ul {
+    list-style: none;
+    padding: 5% 1%;
+}
+
+.links ul li {
+    margin: 5% 0;
+    list-style-type: square;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #007bfe;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: #0056b3;
+}
+
+footer {
+    background: #071218;
+    color: #fff;
+    text-align: center;
+    padding: 2% 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
