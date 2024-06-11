@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEC-V Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="logo-img">
+                <h1 class="logo">TEC-V Project</h1>
+            </div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about">
+        <img src="images/TeamPhoto.jpg" alt="TEC-V Image" class="tecv-img2">
+    </section>
+    
+    
+
+    <section class="mission">
+        <div class="section-content">
+            <h2>Mission Statement</h2>
+            <h2-2>Topographic</h2-2>
+            <h2-2>Exploration</h2-2>
+            <h2-2>Cave</h2-2>
+            <h2-2>Vehicle</h2-2>
+            <h3>Develop an optimized scanning and mapping system designed 
+                for enclosed underwater environments, utilizing integrated 
+                instrumentation on the TEC-V platform. This system aims to 
+                enhance enclosed environmental mapping, cave exploration, 
+                port and harbor monitoring, and under-ice surveying, while 
+                providing an entry-level ROV platform</h3>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="section-content">
+            <h2>About Us</h2>
+            <p>Our team consists of:</p>
+            <ul>
+                <li>Stephen Coster (OE) - Project Lead</li>
+                <li>Henry Hill (OE) - Vechicle Dynamics </li>
+                <li>Mike Dowling (CSE) - Software Integration Technician</li>
+                <li>Gabor Papp (ME) - Mechanical Design Engineer</li>
+            </ul>
+            <h3>We are a group of dedicated engineers and technicians 
+                focused on developing innovative solutions for underwater 
+                exploration.</h3>
+        </div>
+    </section> 
+
+    <section class="team-photos">
+        <div class="section-content-photos">
+            <h2>Photos of Team</h2>
+            <div class="hex-grid">
+                <div class="hex tooltip" data-name="Wood" data-job="Systems Engineer" data-summary="Wood is responsible for the system engineering of TEC-V." style="background-image: url('images/Wood.jpg');">
+                    <p>Wood</p>
+                    
+                </div>
+                <div class="hex tooltip" data-name="Silaghi" data-job="ROV Technician" data-summary="Silaghi manages the remotely operated vehicle systems." style="background-image: url('images/Silaghi.jpg');">
+                    <p>Silaghi</p>
+                    
+                </div>
+                <div class="hex tooltip" data-name="Michael" data-job="Software Integration Technician" data-summary="Michael handles the software integration for TEC-V." style="background-image: url('images/Michael.jpg');">
+                    <p>Michael</p>
+                    
+                </div>
+                <div class="hex tooltip" data-name="Stephen" data-job="Mechanical Design Engineer" data-summary="Stephen oversees the mechanical design of the project." style="background-image: url('images/Stephen.jpg');">
+                    <p>Stephen</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="links">
+        <div class="section-content">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="PDR.pdf" target="_blank">Preliminary Design Review (PDF)</a></li>
+                <li><a href="CDR.pdf" target="_blank">Critical Design Review (PDF)</a></li>
+                <li><a href="https://bluecodehydra.github.io/3DCloudPlot_Webpage/" target="_blank">Mapping Website</a></li>
+                <li><a href="https://bluecodehydra.github.io/FIT_Project-TEC_V/team.html" target="_blank">Team Website</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TEC-V Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for design details and team member details -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="hex big-hex">
+                <div class="hex-in">
+                    <div id="modalImage" class="hex-img"></div>
+                </div>
+            </div>
+            <div class="modal-text">
+                <h2 id="modalName"></h2>
+                <h3 id="modalJob"></h3>
+                <p id="modalSummary"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                var rect = section.getBoundingClientRect();
+                var distanceFromTop = rect.top - window.innerHeight;
+                var distanceFromBottom = rect.bottom;
+
+                if (distanceFromTop < 0 && distanceFromBottom > 0) {
+                    section.style.opacity = 1;
+                    section.style.transform = `translateY(0px)`;
+                } else {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+
+        // Modal functionality
+        var modal = document.getElementById("teamModal");
+        var modalImage = document.getElementById("modalImage");
+        var modalName = document.getElementById("modalName");
+        var modalJob = document.getElementById("modalJob");
+        var modalSummary = document.getElementById("modalSummary");
+
+        document.querySelectorAll('.hex').forEach(function(hex) {
+            hex.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImage.style.backgroundImage = hex.style.backgroundImage;
+                modalName.textContent = hex.dataset.name;
+                modalJob.textContent = hex.dataset.job || hex.dataset.name; // Use the name as job if not provided
+                modalSummary.textContent = hex.dataset.summary;
+            });
+        });
+
+        document.querySelector('.modal .close').addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        document.querySelectorAll('.hex').forEach(function(hex) {
+            hex.addEventListener('mouseover', function(e) {
+                const popupCue = this.querySelector('.popup-cue');
+                popupCue.classList.add('show-popup');
+
+                hex.addEventListener('mousemove', function(e) {
+                    const rect = hex.getBoundingClientRect();
+                    popupCue.style.left = (e.clientX - rect.left + 20) + 'px'; // Adjusted to position to the right
+                    popupCue.style.top = (e.clientY - rect.top - 10) + 'px'; // Adjusted to align vertically with cursor
+                });
+            });
+
+            hex.addEventListener('mouseout', function() {
+                const popupCue = this.querySelector('.popup-cue');
+                popupCue.classList.remove('show-popup');
+            });
+        });
+    </script>
+</body>
+</html>
